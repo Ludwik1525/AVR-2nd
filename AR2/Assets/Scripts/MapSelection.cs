@@ -25,28 +25,28 @@ public class MapSelection : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
-        bOrto.onClick.AddListener(setOrto);
-        bHipso.onClick.AddListener(setHipso);
-        bRegio.onClick.AddListener(setRegio);
-        bKomm.onClick.AddListener(setKomm);
+        bOrto.onClick.AddListener(SetOrto);
+        bHipso.onClick.AddListener(SetHipso);
+        bRegio.onClick.AddListener(SetRegio);
+        bKomm.onClick.AddListener(SetKomm);
     }
 
-    void setOrto()
+    void SetOrto()
     {
         meshRenderer.material = orto;
     }
 
-    void setHipso()
+    void SetHipso()
     {
         meshRenderer.material = hipso;
     }
 
-    void setRegio()
+    void SetRegio()
     {
         meshRenderer.material = regio;
     }
 
-    void setKomm()
+    void SetKomm()
     {
         meshRenderer.material = komm;
     }
