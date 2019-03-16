@@ -11,7 +11,6 @@ public class MapSelection : MonoBehaviour
     public Button bOrto;
     public Button bHipso;
     public Button bRegio;
-    public Button bKomm;
 
     public Material orto;
     public Material hipso;
