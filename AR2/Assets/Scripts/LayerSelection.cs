@@ -10,13 +10,15 @@ public class LayerSelection : MonoBehaviour {
     public GameObject waterDisplay;
     public GameObject regioDisplay;
     public GameObject kommDisplay;
+
     public Button bCity;
     public Button bWater;
     public Button bRegio;
     public Button bKomm;
+
     private bool cityBool = false;
     private bool waterBool = false;
-    private bool regioBool = false;
+    public bool regioBool = false;
     private bool kommBool = false;
 
     void Start()
@@ -30,7 +32,7 @@ public class LayerSelection : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(!cityBool)
+        if (!cityBool)
         {
             bCity.onClick.AddListener(SetCity);
         }
@@ -111,11 +113,15 @@ public class LayerSelection : MonoBehaviour {
     {
         kommDisplay.SetActive(true);
         kommBool = true;
+        regioBool = false;
+        regioDisplay.SetActive(false);
+        bRegio.gameObject.SetActive(false);
     }
 
     void DisableKomm()
     {
         kommDisplay.SetActive(false);
         kommBool = false;
+        bRegio.gameObject.SetActive(true);
     }
 }
