@@ -6,55 +6,60 @@ using UnityEngine.UI;
 
 public class LayerSelection : MonoBehaviour
 {
-
+    // surfaces displaying given layer
     public GameObject citiesDisplay;
     public GameObject waterDisplay;
     public GameObject regioDisplay;
     public GameObject kommDisplay;
 
+    // buttons eabling and disabling given layer
     public Button bCity;
     public Button bWater;
     public Button bRegio;
     public Button bKomm;
     public Button bSev;
 
+    // buttons enabling and disabling names for given layer
     public Button cityName;
     public Button waterName;
     public Button regioName;
     public Button kommName;
     public Button sevName;
 
+    // bools for checking if given layer is active
     private bool cityBool = false;
     private bool waterBool = false;
     public bool regioBool = false;
     private bool kommBool = false;
     private bool sevBool = false;
 
+    // bools for checking if names for given layer are active
     private bool cityNameBool = false;
     private bool waterNameBool = false;
     public bool regioNameBool = false;
     private bool kommNameBool = false;
     private bool sevNameBool = false;
 
+    // colours for buttons
     public Color active;
     public Color inactive;
 
-    private MapSelection mapSelection;
-    private bool isRegio = false;
-
     void Start()
     {
+        // disable all layers
         citiesDisplay.SetActive(false);
         waterDisplay.SetActive(false);
         regioDisplay.SetActive(false);
         kommDisplay.SetActive(false);
 
+        //disable all names buttons
         cityName.gameObject.SetActive(false);
         waterName.gameObject.SetActive(false);
         regioName.gameObject.SetActive(false);
         kommName.gameObject.SetActive(false);
         sevName.gameObject.SetActive(false);
 
+        // disable all names
         DisableCityNames();
         DisableKommNames();
         DisableWaterNames();
@@ -62,28 +67,29 @@ public class LayerSelection : MonoBehaviour
         DisableSevNames();
         DisableSev();
 
+        // assign colours
         active = Color.green;
         inactive = Color.white;
 
+        // set layers buttons' colours
         bCity.GetComponent<Image>().color = inactive;
         bWater.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
         bKomm.GetComponent<Image>().color = inactive;
         bSev.GetComponent<Image>().color = inactive;
 
-
+        // set name buttons' colours
         cityName.GetComponent<Image>().color = inactive;
         waterName.GetComponent<Image>().color = inactive;
         regioName.GetComponent<Image>().color = inactive;
         kommName.GetComponent<Image>().color = inactive;
         sevName.GetComponent<Image>().color = inactive;
-
-        mapSelection = GetComponent<MapSelection>();
-        isRegio = mapSelection.isRegio;
+        
     }
 
     void Update()
     {
+        // if given layer is inactive, then turn it on, if is active, turn it off
         if (!cityBool)
         {
             bCity.onClick.AddListener(SetCity);
@@ -134,6 +140,7 @@ public class LayerSelection : MonoBehaviour
             bSev.onClick.AddListener(DisableSev);
         }
 
+        // if names for given layer are inactive, then turn them on, if they are active, turn them off
         if (!cityNameBool)
         {
             cityName.onClick.AddListener(SetCityNames);
@@ -183,10 +190,9 @@ public class LayerSelection : MonoBehaviour
         {
             sevName.onClick.AddListener(DisableSevNames);
         }
-
-        isRegio = mapSelection.isRegio;
     }
 
+    // functions for enabling and disabling layers
     void SetCity()
     {
         citiesDisplay.SetActive(true);
@@ -245,6 +251,7 @@ public class LayerSelection : MonoBehaviour
         regioBool = false;
         regioDisplay.SetActive(false);
         regioName.gameObject.SetActive(false);
+        DisableRegioNames();
         bRegio.GetComponent<Image>().color = inactive;
         bRegio.gameObject.SetActive(false);
         kommName.gameObject.SetActive(true);
@@ -258,11 +265,7 @@ public class LayerSelection : MonoBehaviour
         kommName.gameObject.SetActive(false);
         DisableKommNames();
         bKomm.GetComponent<Image>().color = inactive;
-
-        if(!isRegio)
-        {
-            bRegio.gameObject.SetActive(true);
-        }
+        bRegio.gameObject.SetActive(true);
     }
 
     void SetSev()
@@ -293,6 +296,7 @@ public class LayerSelection : MonoBehaviour
         sevName.gameObject.SetActive(false);
     }
 
+    // functions for enabling and disabling names for each layer
     void SetCityNames()
     {
         GameObject[] names = new GameObject[50];

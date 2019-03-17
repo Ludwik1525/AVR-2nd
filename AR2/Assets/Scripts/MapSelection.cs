@@ -5,40 +5,39 @@ using UnityEngine.UI;
 
 public class MapSelection : MonoBehaviour
 {
+    // map displaying surface and its renderer
     public GameObject display;
     private MeshRenderer meshRenderer;
 
+    // buttons for choosing the map
     public Button bOrto;
     public Button bHipso;
     public Button bRegio;
 
+    // materials for each map
     public Material orto;
     public Material hipso;
     public Material regio;
-    
-    private Button bbRegio;
-    private LayerSelection layerSelection;
 
+    // colours for buttons
     public Color active;
     public Color inactive;
-
-    public bool isRegio = false;
+   
 
     void Start ()
     {
         meshRenderer = display.GetComponent<MeshRenderer>();
         meshRenderer.material = orto;
-        layerSelection = GetComponent<LayerSelection>();
-        bbRegio = layerSelection.bRegio;
+
         active = Color.green;
         inactive = Color.white;
+
         bOrto.GetComponent<Image>().color = active;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
     }
 	
 	void Update () {
-
         bOrto.onClick.AddListener(SetOrto);
         bHipso.onClick.AddListener(SetHipso);
         bRegio.onClick.AddListener(SetRegio);
@@ -47,30 +46,24 @@ public class MapSelection : MonoBehaviour
     void SetOrto()
     {
         meshRenderer.material = orto;
-        bbRegio.gameObject.SetActive(true);
         bOrto.GetComponent<Image>().color = active;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
-        isRegio = false;
     }
 
     void SetHipso()
     {
         meshRenderer.material = hipso;
-        bbRegio.gameObject.SetActive(true);
         bOrto.GetComponent<Image>().color = inactive;
         bHipso.GetComponent<Image>().color = active;
         bRegio.GetComponent<Image>().color = inactive;
-        isRegio = false;
     }
 
     void SetRegio()
     {
         meshRenderer.material = regio;
-        bbRegio.gameObject.SetActive(false);
         bOrto.GetComponent<Image>().color = inactive;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = active;
-        isRegio = true;
     }
 }
