@@ -19,12 +19,20 @@ public class MapSelection : MonoBehaviour
     private Button bbRegio;
     private LayerSelection layerSelection;
 
+    public Color active;
+    public Color inactive;
+
     void Start ()
     {
         meshRenderer = display.GetComponent<MeshRenderer>();
         meshRenderer.material = orto;
         layerSelection = GetComponent<LayerSelection>();
         bbRegio = layerSelection.bRegio;
+        active = Color.green;
+        inactive = Color.white;
+        bOrto.GetComponent<Image>().color = active;
+        bHipso.GetComponent<Image>().color = inactive;
+        bRegio.GetComponent<Image>().color = inactive;
     }
 	
 	void Update () {
@@ -38,17 +46,26 @@ public class MapSelection : MonoBehaviour
     {
         meshRenderer.material = orto;
         bbRegio.gameObject.SetActive(true);
+        bOrto.GetComponent<Image>().color = active;
+        bHipso.GetComponent<Image>().color = inactive;
+        bRegio.GetComponent<Image>().color = inactive;
     }
 
     void SetHipso()
     {
         meshRenderer.material = hipso;
         bbRegio.gameObject.SetActive(true);
+        bOrto.GetComponent<Image>().color = inactive;
+        bHipso.GetComponent<Image>().color = active;
+        bRegio.GetComponent<Image>().color = inactive;
     }
 
     void SetRegio()
     {
         meshRenderer.material = regio;
         bbRegio.gameObject.SetActive(false);
+        bOrto.GetComponent<Image>().color = inactive;
+        bHipso.GetComponent<Image>().color = inactive;
+        bRegio.GetComponent<Image>().color = active;
     }
 }

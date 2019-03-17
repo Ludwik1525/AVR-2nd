@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class LayerSelection : MonoBehaviour {
+public class LayerSelection : MonoBehaviour
+{
 
     public GameObject citiesDisplay;
     public GameObject waterDisplay;
@@ -31,6 +32,9 @@ public class LayerSelection : MonoBehaviour {
     public bool regioNameBool = false;
     private bool kommNameBool = false;
 
+    public Color active;
+    public Color inactive;
+
     void Start()
     {
         citiesDisplay.SetActive(false);
@@ -47,9 +51,22 @@ public class LayerSelection : MonoBehaviour {
         DisableKommNames();
         DisableWaterNames();
         DisableRegioNames();
+
+        active = Color.green;
+        inactive = Color.white;
+
+        bCity.GetComponent<Image>().color = inactive;
+        bWater.GetComponent<Image>().color = inactive;
+        bRegio.GetComponent<Image>().color = inactive;
+        bKomm.GetComponent<Image>().color = inactive;
+
+
+        cityName.GetComponent<Image>().color = inactive;
+        waterName.GetComponent<Image>().color = inactive;
+        regioName.GetComponent<Image>().color = inactive;
+        kommName.GetComponent<Image>().color = inactive;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!cityBool)
@@ -138,6 +155,7 @@ public class LayerSelection : MonoBehaviour {
         citiesDisplay.SetActive(true);
         cityBool = true;
         cityName.gameObject.SetActive(true);
+        bCity.GetComponent<Image>().color = active;
     }
 
     void DisableCity()
@@ -146,6 +164,7 @@ public class LayerSelection : MonoBehaviour {
         cityBool = false;
         cityName.gameObject.SetActive(false);
         DisableCityNames();
+        bCity.GetComponent<Image>().color = inactive;
     }
 
     void SetWater()
@@ -153,6 +172,7 @@ public class LayerSelection : MonoBehaviour {
         waterDisplay.SetActive(true);
         waterBool = true;
         waterName.gameObject.SetActive(true);
+        bWater.GetComponent<Image>().color = active;
     }
 
     void DisableWater()
@@ -161,6 +181,7 @@ public class LayerSelection : MonoBehaviour {
         waterBool = false;
         waterName.gameObject.SetActive(false);
         DisableWaterNames();
+        bWater.GetComponent<Image>().color = inactive;
     }
 
     void SetRegio()
@@ -168,6 +189,7 @@ public class LayerSelection : MonoBehaviour {
         regioDisplay.SetActive(true);
         regioBool = true;
         regioName.gameObject.SetActive(true);
+        bRegio.GetComponent<Image>().color = active;
     }
 
     void DisableRegio()
@@ -176,6 +198,7 @@ public class LayerSelection : MonoBehaviour {
         regioBool = false;
         regioName.gameObject.SetActive(false);
         DisableRegioNames();
+        bRegio.GetComponent<Image>().color = inactive;
     }
 
     void SetKomm()
@@ -187,6 +210,7 @@ public class LayerSelection : MonoBehaviour {
         regioName.gameObject.SetActive(false);
         bRegio.gameObject.SetActive(false);
         kommName.gameObject.SetActive(true);
+        bKomm.GetComponent<Image>().color = active;
     }
 
     void DisableKomm()
@@ -196,31 +220,34 @@ public class LayerSelection : MonoBehaviour {
         bRegio.gameObject.SetActive(true);
         kommName.gameObject.SetActive(false);
         DisableKommNames();
+        bKomm.GetComponent<Image>().color = inactive;
     }
 
 
     void SetCityNames()
     {
-        Debug.Log("on");
         GameObject[] names = new GameObject[50];
         names = GameObject.FindGameObjectsWithTag("Cities");
-        foreach(GameObject city in names)
+        foreach (GameObject city in names)
         {
             city.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
+
         cityNameBool = true;
+        cityName.GetComponent<Image>().color = active;
     }
 
     void DisableCityNames()
     {
-        Debug.Log("off");
         GameObject[] names = new GameObject[50];
         names = GameObject.FindGameObjectsWithTag("Cities");
         foreach (GameObject city in names)
         {
             city.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
+
         cityNameBool = false;
+        cityName.GetComponent<Image>().color = inactive;
     }
 
     void SetWaterNames()
@@ -231,7 +258,9 @@ public class LayerSelection : MonoBehaviour {
         {
             water.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
+
         waterNameBool = true;
+        waterName.GetComponent<Image>().color = active;
     }
 
     void DisableWaterNames()
@@ -242,7 +271,9 @@ public class LayerSelection : MonoBehaviour {
         {
             water.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
+
         waterNameBool = false;
+        waterName.GetComponent<Image>().color = inactive;
     }
 
     void SetRegioNames()
@@ -253,7 +284,9 @@ public class LayerSelection : MonoBehaviour {
         {
             komm.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
+
         regioNameBool = true;
+        regioName.GetComponent<Image>().color = active;
     }
 
     void DisableRegioNames()
@@ -264,7 +297,9 @@ public class LayerSelection : MonoBehaviour {
         {
             komm.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
+
         regioNameBool = false;
+        regioName.GetComponent<Image>().color = inactive;
     }
 
     void SetKommNames()
@@ -275,7 +310,9 @@ public class LayerSelection : MonoBehaviour {
         {
             reg.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
+
         kommNameBool = true;
+        kommName.GetComponent<Image>().color = active;
     }
 
     void DisableKommNames()
@@ -286,6 +323,8 @@ public class LayerSelection : MonoBehaviour {
         {
             reg.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
+
         kommNameBool = false;
+        kommName.GetComponent<Image>().color = inactive;
     }
 }

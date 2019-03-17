@@ -1274,6 +1274,8 @@ MonoBehaviour:
   orto: {fileID: 2100000, guid: 71620e0a13802cd4e86e1ce6878feb6f, type: 2}
   hipso: {fileID: 2100000, guid: 163a3dbf38782624c80440f65418fbb6, type: 2}
   regio: {fileID: 2100000, guid: cb59c90e29fa3b749b6e1eb285ee1090, type: 2}
+  active: {r: 0.6666667, g: 0.9607844, b: 0.6627451, a: 0}
+  inactive: {r: 0.9058824, g: 0.8431373, b: 0.5529412, a: 0}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1301,8 @@ MonoBehaviour:
   kommName: {fileID: 1049304407}
   regioBool: 0
   regioNameBool: 0
+  active: {r: 0, g: 0, b: 0, a: 0}
+  inactive: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &575097664
 GameObject:
   m_ObjectHideFlags: 0
