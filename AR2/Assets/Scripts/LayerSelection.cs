@@ -145,6 +145,7 @@ public class LayerSelection : MonoBehaviour {
         citiesDisplay.SetActive(false);
         cityBool = false;
         cityName.gameObject.SetActive(false);
+        DisableCityNames();
     }
 
     void SetWater()
@@ -159,6 +160,7 @@ public class LayerSelection : MonoBehaviour {
         waterDisplay.SetActive(false);
         waterBool = false;
         waterName.gameObject.SetActive(false);
+        DisableWaterNames();
     }
 
     void SetRegio()
@@ -173,6 +175,7 @@ public class LayerSelection : MonoBehaviour {
         regioDisplay.SetActive(false);
         regioBool = false;
         regioName.gameObject.SetActive(false);
+        DisableRegioNames();
     }
 
     void SetKomm()
@@ -192,6 +195,7 @@ public class LayerSelection : MonoBehaviour {
         kommBool = false;
         bRegio.gameObject.SetActive(true);
         kommName.gameObject.SetActive(false);
+        DisableKommNames();
     }
 
 
