@@ -22,6 +22,8 @@ public class MapSelection : MonoBehaviour
     public Color active;
     public Color inactive;
 
+    public bool isRegio = false;
+
     void Start ()
     {
         meshRenderer = display.GetComponent<MeshRenderer>();
@@ -49,6 +51,7 @@ public class MapSelection : MonoBehaviour
         bOrto.GetComponent<Image>().color = active;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
+        isRegio = false;
     }
 
     void SetHipso()
@@ -58,6 +61,7 @@ public class MapSelection : MonoBehaviour
         bOrto.GetComponent<Image>().color = inactive;
         bHipso.GetComponent<Image>().color = active;
         bRegio.GetComponent<Image>().color = inactive;
+        isRegio = false;
     }
 
     void SetRegio()
@@ -67,5 +71,6 @@ public class MapSelection : MonoBehaviour
         bOrto.GetComponent<Image>().color = inactive;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = active;
+        isRegio = true;
     }
 }

@@ -35,6 +35,9 @@ public class LayerSelection : MonoBehaviour
     public Color active;
     public Color inactive;
 
+    private MapSelection mapSelection;
+    private bool isRegio = false;
+
     void Start()
     {
         citiesDisplay.SetActive(false);
@@ -65,6 +68,9 @@ public class LayerSelection : MonoBehaviour
         waterName.GetComponent<Image>().color = inactive;
         regioName.GetComponent<Image>().color = inactive;
         kommName.GetComponent<Image>().color = inactive;
+
+        mapSelection = GetComponent<MapSelection>();
+        isRegio = mapSelection.isRegio;
     }
 
     void Update()
@@ -148,6 +154,8 @@ public class LayerSelection : MonoBehaviour
         {
             kommName.onClick.AddListener(DisableKommNames);
         }
+
+        isRegio = mapSelection.isRegio;
     }
 
     void SetCity()
@@ -217,10 +225,14 @@ public class LayerSelection : MonoBehaviour
     {
         kommDisplay.SetActive(false);
         kommBool = false;
-        bRegio.gameObject.SetActive(true);
         kommName.gameObject.SetActive(false);
         DisableKommNames();
         bKomm.GetComponent<Image>().color = inactive;
+
+        if(!isRegio)
+        {
+            bRegio.gameObject.SetActive(true);
+        }
     }
 
 
