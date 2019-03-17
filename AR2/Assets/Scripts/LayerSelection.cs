@@ -16,21 +16,25 @@ public class LayerSelection : MonoBehaviour
     public Button bWater;
     public Button bRegio;
     public Button bKomm;
+    public Button bSev;
 
     public Button cityName;
     public Button waterName;
     public Button regioName;
     public Button kommName;
+    public Button sevName;
 
     private bool cityBool = false;
     private bool waterBool = false;
     public bool regioBool = false;
     private bool kommBool = false;
+    private bool sevBool = false;
 
     private bool cityNameBool = false;
     private bool waterNameBool = false;
     public bool regioNameBool = false;
     private bool kommNameBool = false;
+    private bool sevNameBool = false;
 
     public Color active;
     public Color inactive;
@@ -49,11 +53,14 @@ public class LayerSelection : MonoBehaviour
         waterName.gameObject.SetActive(false);
         regioName.gameObject.SetActive(false);
         kommName.gameObject.SetActive(false);
+        sevName.gameObject.SetActive(false);
 
         DisableCityNames();
         DisableKommNames();
         DisableWaterNames();
         DisableRegioNames();
+        DisableSevNames();
+        DisableSev();
 
         active = Color.green;
         inactive = Color.white;
@@ -62,12 +69,14 @@ public class LayerSelection : MonoBehaviour
         bWater.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
         bKomm.GetComponent<Image>().color = inactive;
+        bSev.GetComponent<Image>().color = inactive;
 
 
         cityName.GetComponent<Image>().color = inactive;
         waterName.GetComponent<Image>().color = inactive;
         regioName.GetComponent<Image>().color = inactive;
         kommName.GetComponent<Image>().color = inactive;
+        sevName.GetComponent<Image>().color = inactive;
 
         mapSelection = GetComponent<MapSelection>();
         isRegio = mapSelection.isRegio;
@@ -115,6 +124,16 @@ public class LayerSelection : MonoBehaviour
             bKomm.onClick.AddListener(DisableKomm);
         }
 
+        if (!sevBool)
+        {
+            bSev.onClick.AddListener(SetSev);
+        }
+
+        if(sevBool)
+        {
+            bSev.onClick.AddListener(DisableSev);
+        }
+
         if (!cityNameBool)
         {
             cityName.onClick.AddListener(SetCityNames);
@@ -153,6 +172,16 @@ public class LayerSelection : MonoBehaviour
         if (kommNameBool)
         {
             kommName.onClick.AddListener(DisableKommNames);
+        }
+
+        if (!sevNameBool)
+        {
+            sevName.onClick.AddListener(SetSevNames);
+        }
+
+        if (sevNameBool)
+        {
+            sevName.onClick.AddListener(DisableSevNames);
         }
 
         isRegio = mapSelection.isRegio;
@@ -216,6 +245,7 @@ public class LayerSelection : MonoBehaviour
         regioBool = false;
         regioDisplay.SetActive(false);
         regioName.gameObject.SetActive(false);
+        bRegio.GetComponent<Image>().color = inactive;
         bRegio.gameObject.SetActive(false);
         kommName.gameObject.SetActive(true);
         bKomm.GetComponent<Image>().color = active;
@@ -235,6 +265,33 @@ public class LayerSelection : MonoBehaviour
         }
     }
 
+    void SetSev()
+    {
+        GameObject[] sevs = new GameObject[50];
+        sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
+        foreach (GameObject sev in sevs)
+        {
+            sev.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        sevBool = true;
+        bSev.GetComponent<Image>().color = active;
+        sevName.gameObject.SetActive(true);
+    }
+
+    void DisableSev()
+    {
+        GameObject[] sevs = new GameObject[50];
+        sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
+        foreach (GameObject sev in sevs)
+        {
+            sev.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+        sevBool = false;
+        bSev.GetComponent<Image>().color = inactive;
+        sevName.gameObject.SetActive(false);
+    }
 
     void SetCityNames()
     {
@@ -338,5 +395,31 @@ public class LayerSelection : MonoBehaviour
 
         kommNameBool = false;
         kommName.GetComponent<Image>().color = inactive;
+    }
+
+    void SetSevNames()
+    {
+        GameObject[] sevs = new GameObject[50];
+        sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
+        foreach (GameObject sev in sevs)
+        {
+            sev.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
+
+        sevNameBool = true;
+        sevName.GetComponent<Image>().color = active;
+    }
+
+    void DisableSevNames()
+    {
+        GameObject[] sevs = new GameObject[50];
+        sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
+        foreach (GameObject sev in sevs)
+        {
+            sev.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        sevNameBool = false;
+        sevName.GetComponent<Image>().color = inactive;
     }
 }
