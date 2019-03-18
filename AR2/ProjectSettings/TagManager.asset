@@ -9,6 +9,7 @@ TagManager:
   - Kommunes
   - Regions
   - "Sev\xE6rdigheder"
+  - LabelTarget
   layers:
   - Default
   - TransparentFX
