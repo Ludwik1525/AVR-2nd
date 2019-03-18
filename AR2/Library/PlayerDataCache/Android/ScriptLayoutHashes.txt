@@ -59,6 +59,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 ddbc4343821d5c5c510e1881a17a1b3a Assembly-CSharp.dll:.MapSelection
 3c7efa05e407aa9abf886ae91bd792b4 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.NetworkManagerUIController
+d7b3ebcad0a9832534fe2d2193cfcb29 Assembly-CSharp.dll:.ButtonHider
 df15c5d51b487dd3a9d2894789c06b0f Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.ComputerVisionController
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -135,6 +136,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9bcadfc966af381a38d7e0696734c123 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 5ad0a3da520e30b2fb73cdf2156d1bcb Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
+97cbded4592ea794a20185a86ca46118 Assembly-CSharp.dll:.MapPlacement
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -340,4 +342,4 @@ c1087bf328bbb39eba5a09f26c3b6368 Vuforia.UnityExtensions.dll:Vuforia.MultiTarget
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-97cbded4592ea794a20185a86ca46118 Assembly-CSharp.dll:.MapPlacement
+e233d1c5f4779b563724f49ce957b012 Assembly-CSharp.dll:.LabelsRotator

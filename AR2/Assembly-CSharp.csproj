@@ -244,6 +244,8 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPSessionStatus.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPTrackingState.cs" />
     <Compile Include="Assets\MapPlacement.cs" />
+    <Compile Include="Assets\Scripts\ButtonHider.cs" />
+    <Compile Include="Assets\Scripts\LabelsRotator.cs" />
     <Compile Include="Assets\Scripts\LayerSelection.cs" />
     <Compile Include="Assets\Scripts\MapSelection.cs" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />

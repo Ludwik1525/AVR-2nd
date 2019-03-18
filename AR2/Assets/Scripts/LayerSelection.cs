@@ -199,6 +199,7 @@ public class LayerSelection : MonoBehaviour
         cityBool = true;
         cityName.gameObject.SetActive(true);
         bCity.GetComponent<Image>().color = active;
+        DisableCityNames();
     }
 
     void DisableCity()
@@ -216,6 +217,7 @@ public class LayerSelection : MonoBehaviour
         waterBool = true;
         waterName.gameObject.SetActive(true);
         bWater.GetComponent<Image>().color = active;
+        DisableWaterNames();
     }
 
     void DisableWater()
@@ -233,6 +235,7 @@ public class LayerSelection : MonoBehaviour
         regioBool = true;
         regioName.gameObject.SetActive(true);
         bRegio.GetComponent<Image>().color = active;
+        DisableRegioNames();
     }
 
     void DisableRegio()
@@ -252,6 +255,7 @@ public class LayerSelection : MonoBehaviour
         regioDisplay.SetActive(false);
         regioName.gameObject.SetActive(false);
         DisableRegioNames();
+        DisableKommNames();
         bRegio.GetComponent<Image>().color = inactive;
         bRegio.gameObject.SetActive(false);
         kommName.gameObject.SetActive(true);
@@ -280,6 +284,7 @@ public class LayerSelection : MonoBehaviour
         sevBool = true;
         bSev.GetComponent<Image>().color = active;
         sevName.gameObject.SetActive(true);
+        DisableSevNames();
     }
 
     void DisableSev()
@@ -294,6 +299,7 @@ public class LayerSelection : MonoBehaviour
         sevBool = false;
         bSev.GetComponent<Image>().color = inactive;
         sevName.gameObject.SetActive(false);
+        DisableSevNames();
     }
 
     // functions for enabling and disabling names for each layer
