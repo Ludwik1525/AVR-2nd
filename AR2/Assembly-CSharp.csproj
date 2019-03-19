@@ -248,6 +248,7 @@
     <Compile Include="Assets\Scripts\LayerSelection.cs" />
     <Compile Include="Assets\Scripts\MapPlacement.cs" />
     <Compile Include="Assets\Scripts\MapSelection.cs" />
+    <Compile Include="Assets\Scripts\QuizStarter.cs" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
