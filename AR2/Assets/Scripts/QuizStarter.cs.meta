@@ -3,7 +3,30 @@ guid: a9f85a06552cc7c4b9a404e04989c5af
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hideButton: {instanceID: 0}
+  - allSettingButtons: {instanceID: 0}
+  - quizButton: {instanceID: 0}
+  - quizOptions: {instanceID: 0}
+  - option1: {instanceID: 0}
+  - option2: {instanceID: 0}
+  - option3: {instanceID: 0}
+  - option4: {instanceID: 0}
+  - counter: {instanceID: 0}
+  - value: {instanceID: 0}
+  - questionText: {instanceID: 0}
+  - questionValue: {instanceID: 0}
+  - points: {instanceID: 0}
+  - pointsValue: {instanceID: 0}
+  - display: {instanceID: 0}
+  - orto: {instanceID: 0}
+  - hipso: {instanceID: 0}
+  - regio: {instanceID: 0}
+  - citiesDisplay: {instanceID: 0}
+  - waterDisplay: {instanceID: 0}
+  - regioDisplay: {instanceID: 0}
+  - sevDisplay: {instanceID: 0}
+  - pointer: {fileID: 4086310804556962, guid: cdcd90d40f77be14f968aad076c3ccb3, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

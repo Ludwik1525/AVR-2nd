@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,8 +32,6 @@ public class QuizStarter : MonoBehaviour
     private int numberCorrect;
     private bool wasCorrect = false;
 
-    private MapSelection mapSelection;
-
     public GameObject display;
     private MeshRenderer meshRenderer;
     public Material orto;
@@ -49,10 +46,37 @@ public class QuizStarter : MonoBehaviour
     public Transform[] objects;
 
     public Transform pointer;
+    
+    private MapSelection mapSelection;
+    private LayerSelection cityLayerSelection;
+    private LayerSelection waterLayerSelection;
+    private LayerSelection regioLayerSelection;
+    private LayerSelection sevLayerSelection;
+
+    public Color active;
+    public Color inactive;
+
+    private Button bOrto;
+    private Button bHipso;
+    private Button bRegio;
+
+    private Button bCity;
+    private Button bWater;
+    private Button bbRegio;
+    private Button bSev;
+
+    private Button cityName;
+    private Button waterName;
+    private Button regioName;
+    private Button sevName;
 
 
     void Start ()
     {
+
+        active = Color.green;
+        inactive = Color.white;
+
         quizOptions.gameObject.SetActive(false);
         counter.gameObject.SetActive(false);
         value.gameObject.SetActive(false);
@@ -61,8 +85,26 @@ public class QuizStarter : MonoBehaviour
         points.gameObject.SetActive(false);
         pointsValue.gameObject.SetActive(false);
         pointer.gameObject.SetActive(false);
+
         mapSelection = GetComponent<MapSelection>();
         meshRenderer = display.GetComponent<MeshRenderer>();
+        bOrto = mapSelection.bOrto;
+        bHipso = mapSelection.bHipso;
+        bRegio = mapSelection.bRegio;
+
+        cityLayerSelection = GetComponent<LayerSelection>();
+        bCity = cityLayerSelection.bCity;
+        cityName = cityLayerSelection.cityName;
+        waterLayerSelection = GetComponent<LayerSelection>();
+        bWater = waterLayerSelection.bWater;
+        waterName = waterLayerSelection.waterName;
+        regioLayerSelection = GetComponent<LayerSelection>();
+        bbRegio = regioLayerSelection.bRegio;
+        regioName = regioLayerSelection.regioName;
+        sevLayerSelection = GetComponent<LayerSelection>();
+        bSev = sevLayerSelection.bSev;
+        sevName = sevLayerSelection.sevName;
+
 
         int i = 0;
         objects = new Transform[137];
@@ -271,6 +313,32 @@ public class QuizStarter : MonoBehaviour
         questionValue.color = Color.black;
         Destroy(GameObject.FindGameObjectWithTag("Pointer"));
         StopAllCoroutines();
+
+        meshRenderer.material = orto;
+        bOrto.GetComponent<Image>().color = active;
+        bHipso.GetComponent<Image>().color = inactive;
+        bRegio.GetComponent<Image>().color = inactive;
+
+
+        citiesDisplay.SetActive(false);
+        waterDisplay.SetActive(false);
+        regioDisplay.SetActive(false);
+        sevDisplay.SetActive(false);
+
+        bCity.GetComponent<Image>().color = inactive;
+        bWater.GetComponent<Image>().color = inactive;
+        bbRegio.GetComponent<Image>().color = inactive;
+        bSev.GetComponent<Image>().color = inactive;
+
+        cityName.GetComponent<Image>().color = inactive;
+        waterName.GetComponent<Image>().color = inactive;
+        regioName.GetComponent<Image>().color = inactive;
+        sevName.GetComponent<Image>().color = inactive;
+
+        cityName.gameObject.SetActive(false);
+        waterName.gameObject.SetActive(false);
+        regioName.gameObject.SetActive(false);
+        sevName.gameObject.SetActive(false);
     }
 
     void NextRound(Button button)
@@ -295,6 +363,7 @@ public class QuizStarter : MonoBehaviour
             if (int.Parse(i.text) == 0)
             {
                 end = true;
+                Destroy(GameObject.FindGameObjectWithTag("Pointer"));
             }
             yield return new WaitForSeconds(1);
         }
