@@ -2680,7 +2680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &184799494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4003,7 +4003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &257398835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7717,7 +7717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &484324666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7768,7 +7768,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Snes:'
+  m_Text: 'Score:'
 --- !u!222 &484324668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9822,7 +9822,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Kommuner gr\xE6nser"
+  m_Text: "Kommune gr\xE6nser"
 --- !u!222 &575097667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12902,7 +12902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &710792710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20990,7 +20990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1080017448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24210,7 +24210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1305336811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26736,7 +26736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1407760896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30050,7 +30050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Regioner gr\xE6nser"
+  m_Text: "Regionale gr\xE6nser"
 --- !u!222 &1626866674
 CanvasRenderer:
   m_ObjectHideFlags: 0

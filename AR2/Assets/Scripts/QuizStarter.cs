@@ -145,7 +145,7 @@ public class QuizStarter : MonoBehaviour
             option3.onClick.AddListener(delegate { NextRound(option3); });
             option4.onClick.AddListener(delegate { NextRound(option4); });
 
-            if (questionNo == 20)
+            if (questionNo == 21)
             {
                 StopAllCoroutines();
                 points.color = Color.red;
@@ -220,7 +220,6 @@ public class QuizStarter : MonoBehaviour
                 }
 
                 chosenObjectName = chosenObject.name;
-                Debug.Log(chosenObject.gameObject.tag + " " + chosenObjectName + " " + correctAnswer);
                 if (correctAnswer == 1)
                 {
                     option1.GetComponentInChildren<Text>().text = chosenObjectName;
@@ -260,7 +259,14 @@ public class QuizStarter : MonoBehaviour
                 value.color = Color.black;
                 value.text = "" + (11);
                 questionNo++;
-                questionValue.text = "" + questionNo;
+                if (questionNo == 21)
+                {
+                    questionValue.text = "" + 20;
+                }
+                else
+                {
+                    questionValue.text = "" + questionNo;
+                }
                 StopAllCoroutines();
                 StartCoroutine(Counter(11, value));
                 end = false;
@@ -311,14 +317,12 @@ public class QuizStarter : MonoBehaviour
         pointsValue.color = Color.black;
         questionText.color = Color.black;
         questionValue.color = Color.black;
-        Destroy(GameObject.FindGameObjectWithTag("Pointer"));
         StopAllCoroutines();
 
         meshRenderer.material = orto;
         bOrto.GetComponent<Image>().color = active;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
-
 
         citiesDisplay.SetActive(false);
         waterDisplay.SetActive(false);
@@ -339,11 +343,26 @@ public class QuizStarter : MonoBehaviour
         waterName.gameObject.SetActive(false);
         regioName.gameObject.SetActive(false);
         sevName.gameObject.SetActive(false);
+
+        GameObject[] pointers = new GameObject[GameObject.FindGameObjectsWithTag("Pointer").Length];
+        pointers = GameObject.FindGameObjectsWithTag("Pointer");
+
+        foreach (GameObject pointer in pointers)
+        {
+            Destroy(pointer);
+        }
     }
 
     void NextRound(Button button)
     {
-        Destroy(GameObject.FindGameObjectWithTag("Pointer"));
+        GameObject[] pointers = new GameObject[GameObject.FindGameObjectsWithTag("Pointer").Length];
+        pointers = GameObject.FindGameObjectsWithTag("Pointer");
+
+        foreach(GameObject pointer in pointers)
+        {
+            Destroy(pointer);
+        }
+
         end = true;
         if (button.gameObject.GetComponentInChildren<Text>().text == chosenObjectName)
         {
