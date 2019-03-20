@@ -7768,7 +7768,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Points:'
+  m_Text: 'Snes:'
 --- !u!222 &484324668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12431,7 +12431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &702558200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12953,7 +12953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Question:       / 20'
+  m_Text: "Sp\xF8rgsm\xE5l:       / 20"
 --- !u!222 &710792712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20319,7 +20319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1045000650
 Transform:
   m_ObjectHideFlags: 0
@@ -21006,7 +21006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 351, y: -69}
+  m_AnchoredPosition: {x: 382, y: -69}
   m_SizeDelta: {x: 265.6, y: 94.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080017449
@@ -25928,6 +25928,12 @@ MonoBehaviour:
   orto: {fileID: 2100000, guid: 71620e0a13802cd4e86e1ce6878feb6f, type: 2}
   hipso: {fileID: 2100000, guid: 163a3dbf38782624c80440f65418fbb6, type: 2}
   regio: {fileID: 2100000, guid: cb59c90e29fa3b749b6e1eb285ee1090, type: 2}
+  citiesDisplay: {fileID: 1396940773}
+  waterDisplay: {fileID: 647409704}
+  regioDisplay: {fileID: 283508096}
+  sevDisplay: {fileID: 1045000649}
+  objects: []
+  pointer: {fileID: 4086310804556962, guid: cdcd90d40f77be14f968aad076c3ccb3, type: 2}
 --- !u!114 &1375737373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25963,6 +25969,7 @@ MonoBehaviour:
   waterDisplay: {fileID: 647409704}
   regioDisplay: {fileID: 283508096}
   kommDisplay: {fileID: 1032103420}
+  sevDisplay: {fileID: 1045000649}
   bCity: {fileID: 998589377}
   bWater: {fileID: 267116197}
   bRegio: {fileID: 1945954346}
@@ -26743,7 +26750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -76, y: -107.600006}
+  m_AnchoredPosition: {x: -98, y: -107.600006}
   m_SizeDelta: {x: 376.4, y: 157.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407760897
@@ -26778,7 +26785,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time left:'
+  m_Text: 'Tid tilbage:'
 --- !u!222 &1407760898
 CanvasRenderer:
   m_ObjectHideFlags: 0

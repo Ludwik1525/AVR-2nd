@@ -10,6 +10,7 @@ TagManager:
   - Regions
   - "Sev\xE6rdigheder"
   - LabelTarget
+  - Pointer
   layers:
   - Default
   - TransparentFX

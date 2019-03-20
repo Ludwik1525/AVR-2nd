@@ -11,6 +11,7 @@ public class LayerSelection : MonoBehaviour
     public GameObject waterDisplay;
     public GameObject regioDisplay;
     public GameObject kommDisplay;
+    public GameObject sevDisplay;
 
     // buttons eabling and disabling given layer
     public Button bCity;
@@ -51,6 +52,8 @@ public class LayerSelection : MonoBehaviour
         waterDisplay.SetActive(false);
         regioDisplay.SetActive(false);
         kommDisplay.SetActive(false);
+        sevDisplay.SetActive(false);
+        
 
         //disable all names buttons
         cityName.gameObject.SetActive(false);
@@ -274,6 +277,7 @@ public class LayerSelection : MonoBehaviour
 
     void SetSev()
     {
+        sevDisplay.gameObject.SetActive(true);
         GameObject[] sevs = new GameObject[50];
         sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
         foreach (GameObject sev in sevs)
@@ -289,6 +293,7 @@ public class LayerSelection : MonoBehaviour
 
     void DisableSev()
     {
+        sevDisplay.gameObject.SetActive(false);
         GameObject[] sevs = new GameObject[50];
         sevs = GameObject.FindGameObjectsWithTag("Seværdigheder");
         foreach (GameObject sev in sevs)
