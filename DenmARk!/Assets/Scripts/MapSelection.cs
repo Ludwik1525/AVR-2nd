@@ -24,8 +24,9 @@ public class MapSelection : MonoBehaviour
     public Color inactive;
    
 
-    void Start ()
+    void OnEnable ()
     {
+        print(display);
         meshRenderer = display.GetComponent<MeshRenderer>();
         meshRenderer.material = orto;
 
@@ -35,12 +36,14 @@ public class MapSelection : MonoBehaviour
         bOrto.GetComponent<Image>().color = active;
         bHipso.GetComponent<Image>().color = inactive;
         bRegio.GetComponent<Image>().color = inactive;
-    }
-	
-	void Update () {
+
         bOrto.onClick.AddListener(SetOrto);
         bHipso.onClick.AddListener(SetHipso);
         bRegio.onClick.AddListener(SetRegio);
+    }
+	
+	void Update () {
+        
     }
 
     void SetOrto()

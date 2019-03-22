@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/lifel/OneDrive/GameDev/ARCoreTest/build.apk
+C:/Users/lifel/Documents/GitHub/AVR-2nd/DenmARk!/build.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
@@ -57,7 +57,9 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
+ddbc4343821d5c5c510e1881a17a1b3a Assembly-CSharp.dll:.MapSelection
 3c7efa05e407aa9abf886ae91bd792b4 Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.NetworkManagerUIController
+d7b3ebcad0a9832534fe2d2193cfcb29 Assembly-CSharp.dll:.ButtonHider
 df15c5d51b487dd3a9d2894789c06b0f Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.ComputerVisionController
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -91,6 +93,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LabelsRotator
 ae4f711076d40c0ca454ab418fef71ec Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.TextureReader
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -134,6 +137,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9bcadfc966af381a38d7e0696734c123 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 5ad0a3da520e30b2fb73cdf2156d1bcb Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
+0bae75359f652318de044ee1de02c91e Assembly-CSharp.dll:.MapPlacement
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -205,10 +209,12 @@ e1c674640f57b2a65634996f5f6ff406 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+81aa5643a3390301e12ebcb6a3542d94 Assembly-CSharp.dll:.QuizStarter
 e11b6556b9c756b0c32367f9222fbd59 Assembly-CSharp.dll:GoogleARCore.ARCoreBackgroundRenderer
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 f9a15fa99d878de49a42f24b610afb1a Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.ARCoreWorldOriginHelper
 0c7b938e47649f8e73232d5650bb5438 Assembly-CSharp.dll:GoogleARCoreInternal.InstantPreviewWarning
+0ffcb574a606e0a019f07276ce199dee Assembly-CSharp.dll:.LayerSelection
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 f9a23391d584962e891d5daf0dfed47f Assembly-CSharp.dll:GoogleARCore.Examples.Common.PointcloudVisualizer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleARCore.Examples.CloudAnchors.AnchorController
@@ -342,9 +348,3 @@ e1c674640f57b2a65634996f5f6ff406 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-ddbc4343821d5c5c510e1881a17a1b3a Assembly-CSharp.dll:.MapSelection
-d7b3ebcad0a9832534fe2d2193cfcb29 Assembly-CSharp.dll:.ButtonHider
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LabelsRotator
-64ce46762e13a9763f06bb8137dd8cba Assembly-CSharp.dll:.MapPlacement
-81aa5643a3390301e12ebcb6a3542d94 Assembly-CSharp.dll:.QuizStarter
-0ffcb574a606e0a019f07276ce199dee Assembly-CSharp.dll:.LayerSelection
